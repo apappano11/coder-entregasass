@@ -9,15 +9,21 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
 
+ @mixin header_style($color, $borde, $bordeestilo) {
+  color: $color;
+  border-color: $borde;
+  border-style: $bordeestilo;
+  
+} 
+
 
 .header-todos {
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #faebd7;
     background-color: #ceaf91;
     text-align: center;
-    border-color: #ceaf91;
-    border-style: groove;   
+    @include header_style(#faebd7,#ceaf91 ,groove )
+   
 }
 
 .titulos-index {
@@ -48,8 +54,7 @@ html {
 
 .main-quienessomos-descripcion {
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #faebd7; 
+    @extend .main-quienessomos-h2;
     padding: 10px 10px 10px 10px;
     margin-bottom: 2cm;
     margin-right: 6cm;
