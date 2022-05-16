@@ -9,6 +9,12 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
 
+ $colores: (
+color_banners: #ceaf91,
+color_bordebanner: #967A68,
+color_titulos: #faebd7
+ );
+
  @mixin header_style($color, $borde, $bordeestilo) {
   color: $color;
   border-color: $borde;
@@ -28,11 +34,9 @@ html {
 
 .titulos-index {
 
-    color: #967A68;
+    color: map-get($colores, color_bordebanner );
 }
 
-
- 
 
 .header-quienessomos {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -49,7 +53,6 @@ html {
     color: #faebd7;
     
 }
-
 
 
 .main-quienessomos-descripcion {
